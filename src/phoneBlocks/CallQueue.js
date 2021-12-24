@@ -33,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '16px'
+    padding: '16px',
+    backgroundColor: 'transparent'
   },
   callButton: {
     color: 'white',
