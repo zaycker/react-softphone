@@ -25,16 +25,16 @@ function StatusBlock({ connectingPhone, connectedPhone }) {
     <div className={classes.root}>
       <Grid container spacing={2}>
         <Grid container direction='row' justify='flex-start' alignItems='center' style={{ flexGrow: 0, maxWidth: '50%', flexBasis: '50%' }}>
-          <Typography id='continuous-slider'>STATUS</Typography>
+          <Typography id='continuous-slider'>Состояние</Typography>
         </Grid>
         <Grid container direction='row' justify='flex-end' alignItems='center' style={{ flexGrow: 0, maxWidth: '50%', flexBasis: '50%' }}>
           {
             !connectingPhone ? (connectedPhone
-              ? <Label className={classes.online} color='primary'>ONLINE</Label>
-              : <Label className={classes.offline} color='primary'>OFFLINE</Label>
+              ? <Label className={classes.online} color='primary'>Онлайн</Label>
+              : <Label className={classes.offline} color='primary'>Оффлайн</Label>
             ) : (!connectedPhone
-              ? <Label className={classes.online} color='primary'>CONNECTING</Label>
-              : <Label className={classes.offline} color='primary'>DISCONNECTING</Label>)
+              ? <Label className={classes.online} color='primary'>Соединение</Label>
+              : <Label className={classes.offline} color='primary'>Отключение</Label>)
           }
         </Grid>
       </Grid>

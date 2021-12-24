@@ -26,8 +26,8 @@ import SwipeCaruselBodyBlock from './phoneBlocks/SwipeCaruselBodyBlock'
 import StatusBlock from './phoneBlocks/StatusBlock'
 import CallQueue from './phoneBlocks/CallQueue'
 import CallsFlowControl from './CallsFlowControl'
+import ringtone from './ringtone'
 
-const flowRoute = new CallsFlowControl()
 const player = createRef()
 const ringer = createRef()
 
@@ -113,6 +113,7 @@ function SoftPhone({
   asteriskAccounts = [],
   opened,
   header,
+  flowControl = new CallsFlowControl(),
 }) {
   const defaultSoftPhoneState = {
     displayCalls: [
@@ -598,7 +599,7 @@ function SoftPhone({
       player.current.volume = parseInt(localStatePhone.callVolume, 10) / 100
       // player.volume = this.outputVolume;
       flowRoute.player = player
-      ringer.current.src = '/sound/ringing.mp3'
+      ringer.current.src = ringtone
       ringer.current.loop = true
       ringer.current.volume = parseInt(localStatePhone.ringVolume, 10) / 100
       flowRoute.ringer = ringer
@@ -750,7 +751,10 @@ SoftPhone.propTypes = {
   timelocale: PropTypes.any,
   asteriskAccounts: PropTypes.any,
   opened: PropTypes.bool,
-  header: PropTypes.node
+  header: PropTypes.node,
+  flowControl: PropTypes.instanceOf(CallsFlowControl)
 }
 
 export default SoftPhone
+
+export { CallsFlowControl }

@@ -126,13 +126,13 @@ function SwipeCaruselBodyBlock({
           <Tab
             className={classes.tabs}
             icon={<SettingsIcon />}
-            label='Settings'
+            label='Настройки'
             {...a11yProps(0)}
           />
           <Tab
             className={classes.tabs}
             icon={<HistoryIcon />}
-            label='History'
+            label='История'
             {...a11yProps(1)}
           />
         </Tabs>
