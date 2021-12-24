@@ -113,7 +113,7 @@ function SoftPhone({
   asteriskAccounts = [],
   opened,
   header,
-  flowControl = new CallsFlowControl(),
+  flowRoute = new CallsFlowControl()
 }) {
   const defaultSoftPhoneState = {
     displayCalls: [
@@ -752,7 +752,7 @@ SoftPhone.propTypes = {
   asteriskAccounts: PropTypes.any,
   opened: PropTypes.bool,
   header: PropTypes.node,
-  flowControl: PropTypes.instanceOf(CallsFlowControl)
+  flowRoute: PropTypes.instanceOf(CallsFlowControl)
 }
 
 export default SoftPhone
