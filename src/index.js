@@ -110,10 +110,14 @@ function SoftPhone({
   asteriskAccounts = [],
   opened,
   header,
-  flowRoute = new CallsFlowControl()
+  ...props
 }) {
   const player = useRef()
   const ringer = useRef()
+
+  const flowRouteRef = useRef(props.flowRoute || new CallsFlowControl())
+  const flowRoute = flowRouteRef.current
+
   const defaultSoftPhoneState = {
     displayCalls: [
       {
