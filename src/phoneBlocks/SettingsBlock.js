@@ -95,14 +95,14 @@ function SettingsBlock({
             <FormControlLabel
               value='top'
               control={<Switch className={classes.switch} checked={notifications} color='primary' onChange={handleNotifications} />}
-              label='Notifications'
+              label='Оповещения'
               labelPlacement='start'
               className={classes.label}
             />
             <FormControlLabel
               value='top'
               control={<Switch className={classes.switch} checked={phoneConnectOnStart} color='primary' onChange={handleConnectOnStart} />}
-              label='Auto Connect'
+              label='Автосоединение'
               labelPlacement='start'
               className={classes.label}
             />
@@ -110,7 +110,7 @@ function SettingsBlock({
             <FormControlLabel
               value='top'
               control={<Switch className={classes.switch} disabled={connectingPhone} checked={connectedPhone} color='primary' onChange={handleConnectPhone} />}
-              label={connectedPhone ? 'Disconnect' : 'Connect'}
+              label={connectedPhone ? 'Отключиться' : 'Подключиться'}
               labelPlacement='start'
               className={classes.label}
             />

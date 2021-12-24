@@ -149,8 +149,6 @@ function SwipeCaruselBlock({
           aria-label='full width tabs example'
         >
           <Tab className={classes.tabs} label='CH 1' {...a11yProps(0)} />
-          <Tab className={classes.tabs} label='CH 2' {...a11yProps(1)} />
-          <Tab className={classes.tabs} label='Ch 3' {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -174,20 +172,20 @@ function SwipeCaruselBlock({
                       // Show hold Call info
                       <div className={classes.text}>
                         <Typography>
-                          Status:
+                          Состояние:
                           {' '}
                           {displayCall.callInfo}
                         </Typography>
                         <Typography>
-                          Duration:
+                          Длительность:
                           {duration[key].duration}
                         </Typography>
                         <Typography>
-                          Number:
+                          Номер:
                           {displayCall.callNumber}
                         </Typography>
                         <Typography>
-                          Side:
+                          Направление:
                           {displayCall.direction}
                         </Typography>
                       </div>
@@ -198,33 +196,33 @@ function SwipeCaruselBlock({
                       // Show In Transfer info
                       <div className={classes.text}>
                         <Typography>
-                          Status:
+                          Состояние:
                           {' '}
                           {displayCall.callInfo}
                         </Typography>
                         <Typography>
-                          Side:
+                          Направление:
                           {displayCall.direction}
                         </Typography>
                         <Typography>
-                          Duration:
+                          Длительность:
                           {duration[key].duration}
                         </Typography>
                         <Typography>
-                          Number:
+                          Номер:
                           {' '}
                           {displayCall.callNumber}
                         </Typography>
                         <Typography>
-                          Transfer to :
+                          Отправка:
                           {' '}
                           {displayCall.transferNumber}
                         </Typography>
                         <Typography>
                           {displayCall.attendedTransferOnline.length > 1 &&
                           !displayCall.inConference ? (
-                            <span>
-                                { 'Talking with :' }
+                              <span>
+                                { 'Разговор с:' }
                                 {' '}
                                 {displayCall.attendedTransferOnline}
                               </span>
@@ -239,19 +237,19 @@ function SwipeCaruselBlock({
                     // Show In Call info
                     <div className={classes.text}>
                       <Typography>
-                        Status:
+                        Состояние:
                         {displayCall.callInfo}
                       </Typography>
                       <Typography>
-                        Side:
+                        Направление:
                         {displayCall.direction}
                       </Typography>
                       <Typography>
-                        Duration:
+                        Длительность:
                         {duration[key].duration}
                       </Typography>
                       <Typography>
-                        Number:
+                        Номер:
                         {displayCall.callNumber}
                       </Typography>
 
@@ -263,17 +261,17 @@ function SwipeCaruselBlock({
                   // Show Calling info
                   <div className={classes.text}>
                     <Typography>
-                      Status:
+                      Состояние:
                       {' '}
                       {displayCall.callInfo}
                     </Typography>
                     <Typography>
-                      Side:
+                      Направление:
                       {' '}
                       {displayCall.direction}
                     </Typography>
                     <Typography>
-                      Number:
+                      Номер:
                       {' '}
                       {displayCall.callNumber}
                     </Typography>
@@ -286,7 +284,7 @@ function SwipeCaruselBlock({
                 // Show Ready info
                 <div className={classes.text}>
                   <Typography>
-                    Status:
+                    Состояние:
                     {' '}
                     {displayCall.callInfo}
                     {' '}

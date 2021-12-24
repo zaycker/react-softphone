@@ -110,7 +110,9 @@ function SoftPhone({
   connectOnStart = true,
   config,
   timelocale = 'UTC',
-  asteriskAccounts = []
+  asteriskAccounts = [],
+  opened,
+  header,
 }) {
   const defaultSoftPhoneState = {
     displayCalls: [
@@ -605,6 +607,11 @@ function SoftPhone({
     }
   },
   [config, localStatePhone.callVolume, localStatePhone.phoneConnectOnStart, localStatePhone.ringVolume])
+
+  useEffect(() => {
+    toggleDrawer(opened)
+  }, [opened])
+
   const dialNumberOnEnter = (event) => {
     if (event.key === 'Enter') {
       handleCall(event)
@@ -638,6 +645,7 @@ function SoftPhone({
       >
         {/* Hide Phone Button */}
         <div style={{ minHeight: 30 }} className={classes.drawerHeader}>
+          {header}
           <IconButton onClick={toggleDrawer(false)}>
             {classes.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
@@ -740,7 +748,9 @@ SoftPhone.propTypes = {
   connectOnStart: PropTypes.any,
   config: PropTypes.any,
   timelocale: PropTypes.any,
-  asteriskAccounts: PropTypes.any
+  asteriskAccounts: PropTypes.any,
+  opened: PropTypes.bool,
+  header: PropTypes.node
 }
 
 export default SoftPhone
