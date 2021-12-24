@@ -8,7 +8,8 @@ import { Call, CallEnd } from '@material-ui/icons'
 const useStyles = makeStyles((theme) => ({
   root: {
     alignItems: 'center',
-    width: '100%'
+    width: '100%',
+    zIndex: 1
   },
   answer: {
     color: theme.palette.common.white,
@@ -29,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 9
   },
   wrapper: {
-    background: '#fff',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -77,7 +77,7 @@ function CallQueue({ calls, handleAnswer, handleReject }) {
           >
             <Grid item xs={12}>
               {parsedCaller[0] ? (
-                <Box overflow='auto' component='div' whiteSpace='normal' bgcolor='background.paper'>
+                <Box overflow='auto' component='div' whiteSpace='normal'>
                   <Typography variant='subtitle1'>
                     Caller:
                     {parsedCaller[0]}
@@ -85,7 +85,7 @@ function CallQueue({ calls, handleAnswer, handleReject }) {
                 </Box>
               ) : <div />}
               {parsedCaller[1] ? (
-                <Box overflow='auto' component='div' whiteSpace='normal' bgcolor='background.paper'>
+                <Box overflow='auto' component='div' whiteSpace='normal'>
                   <Typography variant='subtitle1'>
                     Jurisdiction:
                     {parsedCaller[1]}
@@ -93,7 +93,7 @@ function CallQueue({ calls, handleAnswer, handleReject }) {
                 </Box>
               ) : <div />}
               {parsedCaller[2] ? (
-                <Box overflow='auto' component='div' whiteSpace='normal' bgcolor='background.paper'>
+                <Box overflow='auto' component='div' whiteSpace='normal'>
                   <Typography variant='subtitle1'>
                     To Number:
                     {parsedCaller[2]}
