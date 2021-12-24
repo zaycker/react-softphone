@@ -1,5 +1,5 @@
 {
-  "name": "react-softphone",
+  "name": "react-softphone-lite",
   "version": "1.6.0",
   "description": "Webrtc Softphone React",
   "main": "dist/index.js",
@@ -20,18 +20,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/prinze77/react-softphone.git"
+    "url": "git+https://github.com/zaycker/react-softphone.git"
   },
   "keywords": [
     "Reqact",
     "Webrtc",
     "Softphone"
   ],
-  "author": "Dionis",
+  "author": "Dionis (zaycker modified)",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/prinze77/react-softphone/issues"
-  },
   "homepage": "https://github.com/prinze77/react-softphone#readme",
   "peerDependencies": {
     "@material-ui/core": "^4.9.9",
@@ -44,7 +41,6 @@
     "luxon": "^1.24.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1",
     "react-swipeable-views": "^0.13.9"
   },
   "dependencies": {
@@ -59,7 +55,6 @@
     "np": "^7.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1",
     "react-swipeable-views": "^0.13.9",
     "styled-components": "^5.1.1"
   },

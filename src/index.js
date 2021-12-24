@@ -20,7 +20,6 @@ import {
 import _ from 'lodash'
 import MuiAlert from '@material-ui/lab/Alert'
 import PropTypes from 'prop-types'
-import Page from './phoneBlocks/Page'
 import KeypadBlock from './phoneBlocks/KeypadBlock'
 import SwipeCaruselBlock from './phoneBlocks/SwipeCaruselBlock'
 import SwipeCaruselBodyBlock from './phoneBlocks/SwipeCaruselBodyBlock'
@@ -132,51 +131,6 @@ function SoftPhone({
         transferNumber: '',
         attendedTransferOnline: '',
         inConference: false,
-        callNumber: '',
-        duration: 0,
-        side: '',
-        sessionId: ''
-      },
-      {
-        id: 1,
-        info: 'Ch 2',
-        hold: false,
-        muted: 0,
-        autoMute: 0,
-        inCall: false,
-        inAnswer: false,
-        inAnswerTransfer: false,
-        inConference: false,
-        inTransfer: false,
-        callInfo: 'Ready',
-        allowTransfer: true,
-        transferControl: false,
-        allowAttendedTransfer: true,
-        transferNumber: '',
-        attendedTransferOnline: '',
-        callNumber: '',
-        duration: 0,
-        side: '',
-        sessionId: ''
-      },
-      {
-        id: 2,
-        info: 'Ch 3',
-        hold: false,
-        muted: 0,
-        autoMute: 0,
-        inCall: false,
-        inConference: false,
-        inAnswer: false,
-        callInfo: 'Ready',
-        inTransfer: false,
-        inAnswerTransfer: false,
-        Transfer: false,
-        allowTransfer: true,
-        transferControl: false,
-        allowAttendedTransfer: true,
-        transferNumber: '',
-        attendedTransferOnline: '',
         callNumber: '',
         duration: 0,
         side: '',
@@ -657,10 +611,7 @@ function SoftPhone({
     }
   }
   return (
-    <Page
-      className={classes.root}
-      title='Phone'
-    >
+    <div className={classes.root}>
 
       {/* Phone Button */}
       <label htmlFor='icon-button-file'>
@@ -774,7 +725,7 @@ function SoftPhone({
       <div hidden>
         <audio preload='auto' ref={ringer} />
       </div>
-    </Page>
+    </div>
   )
 }
 
