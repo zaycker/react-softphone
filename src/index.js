@@ -1,8 +1,8 @@
 import React,
 {
-  createRef,
   useEffect,
-  useState
+  useState,
+  useRef
 } from 'react'
 import {
   Divider,
@@ -27,9 +27,6 @@ import StatusBlock from './phoneBlocks/StatusBlock'
 import CallQueue from './phoneBlocks/CallQueue'
 import CallsFlowControl from './CallsFlowControl'
 import ringtone from './ringtone'
-
-const player = createRef()
-const ringer = createRef()
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -115,6 +112,8 @@ function SoftPhone({
   header,
   flowRoute = new CallsFlowControl()
 }) {
+  const player = useRef()
+  const ringer = useRef()
   const defaultSoftPhoneState = {
     displayCalls: [
       {
